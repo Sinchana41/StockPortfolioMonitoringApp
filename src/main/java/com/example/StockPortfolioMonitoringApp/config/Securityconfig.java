@@ -24,7 +24,8 @@ public class Securityconfig {
 
                   http
                         .csrf(csrf -> csrf.disable())
-                        .authorizeHttpRequests(auth -> auth.requestMatchers("/app/user/register","/app/user/login")
+                        .authorizeHttpRequests(auth -> auth.requestMatchers("/app/user/register",
+                                        "/app/user/login", "/app/user/forget-password", "/app/user/reset-password")
                         .permitAll()
                         .anyRequest()
                         .authenticated()
